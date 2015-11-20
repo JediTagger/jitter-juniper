@@ -49,5 +49,7 @@ namespace Jitter.Tests.Models
             Assert.AreEqual(null, a_jot.Author);
             Assert.AreEqual("https://google.com", a_jot.Picture);
         }
+
+
     }
 }
