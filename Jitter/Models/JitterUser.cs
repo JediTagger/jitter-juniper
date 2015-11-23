@@ -23,5 +23,11 @@ namespace Jitter.Models
 
         public string LastName { get; set; }
         public string Picture { get; set; }
+
+        public List<Jot> Jots { get; set; }
+        public List<JitterUser> Following { get; set; } //Users I'm following. We chose to do it this way.
+        //public List<JitterUser> Followers { get; set; } Users following me. We chose not to do it this way.
+
+
     }
 }

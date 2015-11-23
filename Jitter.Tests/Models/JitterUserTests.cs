@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Jitter.Models;
+using System.Collections.Generic;
 
 namespace Jitter.Tests.Models
 {
@@ -33,5 +34,33 @@ namespace Jitter.Tests.Models
             Assert.AreEqual("https://google.com", a_user.Picture);
 
         }
+
+        [TestMethod]
+        public void JitterUserHasJots()
+        {
+            List<Jot> ListOfJots = new List<Jot>
+            {
+                new Jot { Content = "blah" },
+                new Jot { Content = "blah2" }
+            };
+            JitterUser a_user = new JitterUser { Handle = "Bobbert", Jots = ListOfJots};
+            List<Jot> actual_jots = a_user.Jots;
+            CollectionAssert.AreEqual(ListOfJots, actual_jots);
+        }
+
+        [TestMethod]
+        public void JitterUserFollowsOtherUsers()
+        {
+            List<JitterUser> ListOfUsers = new List<JitterUser>
+            {
+                new JitterUser { Handle = "sara1" },
+                new JitterUser {Handle = "john1" }
+            };
+            JitterUser a_user = new JitterUser { Handle = "bobbert", Following = ListOfUsers };
+            List<JitterUser> actual_users = a_user.Following;
+            CollectionAssert.AreEqual(ListOfUsers, actual_users);
+        }
+
+
     }
 }
