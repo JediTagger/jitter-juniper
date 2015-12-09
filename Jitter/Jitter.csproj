@@ -259,10 +259,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Nav.cshtml" />
-    <Content Include="Views\Shared\_JitterLayout.cshtml" />
-    <Content Include="Views\Jitter\Index.cshtml" />
     <Content Include="Views\Jitter\TopFavs.cshtml" />
     <Content Include="Views\Jitter\YourFeed.cshtml" />
+    <Content Include="Views\Jitter\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
